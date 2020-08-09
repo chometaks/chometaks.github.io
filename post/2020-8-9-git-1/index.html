@@ -59,7 +59,7 @@
   "headline": "git\/github覚え書き①",
   "description" : "gitとgithubを真面目に使うことから逃げ続けた結果苦労したのでとりあえずメモ(あとで追加するかも)\n",
   "inLanguage" : "en",
-  "wordCount":  153 ,
+  "wordCount":  158 ,
   "datePublished" : "2020-08-09T04:36:27",
   "dateModified" : "2020-08-09T04:36:27",
   "image" : "https:\/\/chometaks.github.io\/images\/uropen.png",
@@ -310,72 +310,76 @@ if (!doNotTrack) {
 <p>右に行くほど上流ブランチ</p>
 <h1 id="git-pullがよくわかんない">git pullがよくわかんない</h1>
 <hr>
-<p>pull→fetch+merge<br>
-fetch→リモート追跡ブランチにリモートリポジトリをコピー(すべてのブランチ origin/〇〇 が更新される？)<br>
-merge origin/〇〇→ローカルリポジトリの今いるブランチにリモート追跡ブランチorigin/〇〇をマージ<br>
+<p>-pull→fetch+merge<br>
+-fetch→リモート追跡ブランチにリモートリポジトリをコピー(すべてのブランチ origin/〇〇 が更新される？)<br>
+-merge origin/〇〇→ローカルリポジトリの今いるブランチにリモート追跡ブランチorigin/〇〇をマージ<br>
 マージ#とは<br>
 両方の変更を保持して合わせること<br>
 マージしてもローカルリポジトリが変更されただけなのでリモートリポジトリは変更されてない<br>
 参照のみ移動するのはfast forwardマージ</p>
-<p><code>$git pull</code></p>
-<p>masterブランチにいるとき、リモートのmasterブランチの内容をコピー</p>
-<p>masterブランチ以外ではエラー</p>
-<p><code>$git pull origin master'</code></p>
-<p>上に同じ</p>
-<p><code>$git pull origin hoge</code></p>
-<p>hogeブランチにいるとき、リモートのhogeブランチの内容をコピー</p>
-<p>masterブランチにいるとき、リモートのhogeブランチの内容とマージされる</p>
+<p>-<code>$git pull</code><br>
+masterブランチにいるとき、リモートのmasterブランチの内容をコピー<br>
+masterブランチ以外ではエラー</p>
+<p>-<code>$git pull origin master'</code><br>
+上に同じ</p>
+<p>-<code>$git pull origin hoge</code>  <br>
+hogeブランチにいるとき、リモートのhogeブランチの内容をコピー<br>
+masterブランチにいるとき、リモートのhogeブランチの内容とマージされる</p>
 <h1 id="コミットってなんだ">コミットってなんだ</h1>
-<p>ローカルリポジトリのブランチの作業内容を編集履歴に入れる</p>
-<p>(リモートリポジトリにpushする準備)</p>
+<hr>
+<p>ローカルリポジトリのブランチの作業内容を編集履歴に入れる<br>
+(リモートリポジトリにpushする準備)</p>
 <p>ローカルリポジトリの階層</p>
-<p>|編集履歴|
-|git reset (mode) (commit)↓    ↑git commit -m&quot;コミット内容&quot;|
-|ステージ|
-|git reset HEAD           ↓    ↑git add .|
-|作業フォルダ|</p>
+<p>|編集履歴  |
+|git reset (mode) (commit)↓    ↑git commit -m&quot;コミット内容&rdquo;  |
+|ステージ  |
+|git reset HEAD           ↓    ↑git add .  |
+|作業フォルダ  |</p>
 <h1 id="実際の流れ一人でやるとき">実際の流れ(一人でやるとき)</h1>
-<p>(始めるとき)ディレクトリをgitで管理できるようにする</p>
-<p>.gitファイルが作成される</p>
-<p><code>$git init</code></p>
-<p>リポジトリを作成</p>
-<p>リポジトリとデバイスのディレクトリを紐付ける
+<hr>
+<p>-(始めるとき)ディレクトリをgitで管理できるようにする<br>
+.gitファイルが作成される<br>
+<code>$git init</code></p>
+<p>-リポジトリを作成</p>
+<p>-リポジトリとデバイスのディレクトリを紐付ける
 <code>$git remote add origin (URL)</code></p>
-<p>(他のデバイスから持ってくるとき)リモートリポジトリからコピー</p>
-<p><code>$git clone (自分のリポジトリのURL)</code></p>
-<p>(他のデバイスでやった変更を適用)</p>
-<p><code>$git pull</code></p>
-<p>実作業(コマンドラインでファイルを作ったほうがわかりやすいと思う)</p>
-<p>変更をステージング</p>
-<p>. ですべてのファイル、ファイル名指定もできる
-<code>$git add .</code></p>
-<p>(戻すときは'$git reset HEAD&rsquo;)</p>
-<p>変更をコミット</p>
-<p><code>$git commit -m &quot;コミット内容をわかりやすく書く&quot;</code></p>
-<p>(なかったことにするときは<code>$git reset --hard HEAD^</code>)</p>
-<p>リモートリポジトリに変更を適用</p>
-<p><code>$git push -u origin master</code></p>
+<p>-(他のデバイスから持ってくるとき)リモートリポジトリからコピー
+<code>$git clone (自分のリポジトリのURL)</code></p>
+<p>-(他のデバイスでやった変更を適用)
+<code>$git pull</code></p>
+<p>-実作業(コマンドラインでファイルを作ったほうがわかりやすいと思う)</p>
+<p>-変更をステージング
+. ですべてのファイル、ファイル名指定もできる<br>
+<code>$git add .</code><br>
+(戻すときは'$git reset HEAD&rsquo;)</p>
+<p>-変更をコミット
+<code>$git commit -m &quot;コミット内容をわかりやすく書く&quot;</code><br>
+(なかったことにするときは<code>$git reset --hard HEAD^</code>)</p>
+<p>-リモートリポジトリに変更を適用
+<code>$git push -u origin master</code></p>
 <h3 id="ブランチ使うとき">ブランチ使うとき</h3>
-<p>ブランチ切る</p>
-<p><code>$git brunch hoge</code></p>
-<p>ブランチに入る</p>
-<p><code>$git checkout hoge</code></p>
-<p>(他のデバイスでやったブランチを持ってくるとき)</p>
-<p><code>$git pull origin hoge</code></p>
-<p>実作業</p>
-<p>addしてcommitしてpush</p>
-<p>ブランチの作業内容をmasterにマージ</p>
-<p>masterに入る</p>
-<p><code>$git checkout master</code></p>
-<p>マージ</p>
-<p><code>$git merge hoge</code></p>
-<p>リモートリポジトリにpush</p>
-<p><code>$git push -u origin master</code></p>
+<hr>
+<p>-ブランチ切る
+<code>$git brunch hoge</code></p>
+<p>-ブランチに入る
+<code>$git checkout hoge</code></p>
+<p>-(他のデバイスでやったブランチを持ってくるとき)
+<code>$git pull origin hoge</code></p>
+<p>-実作業</p>
+<p>-addしてcommitしてpush</p>
+<p>-ブランチの作業内容をmasterにマージ</p>
+<p>-masterに入る
+<code>$git checkout master</code></p>
+<p>-マージ
+<code>$git merge hoge</code></p>
+<p>-リモートリポジトリにpush
+<code>$git push -u origin master</code></p>
 <h1 id="次回">次回</h1>
-<p>複数人で開発するとき</p>
-<p>(めっちゃわかりづらくなってしまった)</p>
-<p>##参考
-<a href="https://qiita.com/kibinag0/items/ec6583e4e7608c4d2add#%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA">https://qiita.com/kibinag0/items/ec6583e4e7608c4d2add#%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA</a>
+<hr>
+<p>複数人で開発するとき<br>
+(めっちゃわかりづらくなってしまった)</p>
+<h2 id="参考">参考</h2>
+<p><a href="https://qiita.com/kibinag0/items/ec6583e4e7608c4d2add#%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA">https://qiita.com/kibinag0/items/ec6583e4e7608c4d2add#%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA</a>
 <a href="https://eng-entrance.com/git-pull">https://eng-entrance.com/git-pull</a>
 <a href="https://qiita.com/bitarx/items/4558f86e43a2c3493fa9">https://qiita.com/bitarx/items/4558f86e43a2c3493fa9</a>
 <a href="https://qiita.com/uasi/items/69368c17c79e99aaddbf">https://qiita.com/uasi/items/69368c17c79e99aaddbf</a>
