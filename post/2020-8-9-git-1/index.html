@@ -310,21 +310,35 @@ if (!doNotTrack) {
 <p>右に行くほど上流ブランチ</p>
 <h1 id="git-pullがよくわかんない">git pullがよくわかんない</h1>
 <hr>
-<p>-pull→fetch+merge<br>
--fetch→リモート追跡ブランチにリモートリポジトリをコピー(すべてのブランチ origin/〇〇 が更新される？)<br>
--merge origin/〇〇→ローカルリポジトリの今いるブランチにリモート追跡ブランチorigin/〇〇をマージ<br>
+<ul>
+<li>
+<p>pull→fetch+merge</p>
+</li>
+<li>
+<p>fetch→リモート追跡ブランチにリモートリポジトリをコピー(すべてのブランチ origin/〇〇 が更新される？)</p>
+</li>
+<li>
+<p>merge origin/〇〇→ローカルリポジトリの今いるブランチにリモート追跡ブランチorigin/〇〇をマージ<br>
 マージ#とは<br>
 両方の変更を保持して合わせること<br>
 マージしてもローカルリポジトリが変更されただけなのでリモートリポジトリは変更されてない<br>
 参照のみ移動するのはfast forwardマージ</p>
-<p>-<code>$git pull</code><br>
+</li>
+<li>
+<p><code>$git pull</code><br>
 masterブランチにいるとき、リモートのmasterブランチの内容をコピー<br>
 masterブランチ以外ではエラー</p>
-<p>-<code>$git pull origin master'</code><br>
+</li>
+<li>
+<p><code>$git pull origin master'</code><br>
 上に同じ</p>
-<p>-<code>$git pull origin hoge</code>  <br>
+</li>
+<li>
+<p><code>$git pull origin hoge</code>  <br>
 hogeブランチにいるとき、リモートのhogeブランチの内容をコピー<br>
 masterブランチにいるとき、リモートのhogeブランチの内容とマージされる</p>
+</li>
+</ul>
 <h1 id="コミットってなんだ">コミットってなんだ</h1>
 <hr>
 <p>ローカルリポジトリのブランチの作業内容を編集履歴に入れる<br>
@@ -337,43 +351,83 @@ masterブランチにいるとき、リモートのhogeブランチの内容と�
 |作業フォルダ  |</p>
 <h1 id="実際の流れ一人でやるとき">実際の流れ(一人でやるとき)</h1>
 <hr>
-<p>-(始めるとき)ディレクトリをgitで管理できるようにする<br>
+<ul>
+<li>
+<p>(始めるとき)ディレクトリをgitで管理できるようにする<br>
 .gitファイルが作成される<br>
 <code>$git init</code></p>
-<p>-リポジトリを作成</p>
-<p>-リポジトリとデバイスのディレクトリを紐付ける
+</li>
+<li>
+<p>リポジトリを作成</p>
+</li>
+<li>
+<p>リポジトリとデバイスのディレクトリを紐付ける
 <code>$git remote add origin (URL)</code></p>
-<p>-(他のデバイスから持ってくるとき)リモートリポジトリからコピー
+</li>
+<li>
+<p>(他のデバイスから持ってくるとき)リモートリポジトリからコピー
 <code>$git clone (自分のリポジトリのURL)</code></p>
-<p>-(他のデバイスでやった変更を適用)
+</li>
+<li>
+<p>(他のデバイスでやった変更を適用)
 <code>$git pull</code></p>
-<p>-実作業(コマンドラインでファイルを作ったほうがわかりやすいと思う)</p>
-<p>-変更をステージング
+</li>
+<li>
+<p>実作業(コマンドラインでファイルを作ったほうがわかりやすいと思う)</p>
+</li>
+<li>
+<p>変更をステージング
 . ですべてのファイル、ファイル名指定もできる<br>
 <code>$git add .</code><br>
 (戻すときは'$git reset HEAD&rsquo;)</p>
-<p>-変更をコミット
+</li>
+<li>
+<p>変更をコミット
 <code>$git commit -m &quot;コミット内容をわかりやすく書く&quot;</code><br>
 (なかったことにするときは<code>$git reset --hard HEAD^</code>)</p>
-<p>-リモートリポジトリに変更を適用
+</li>
+<li>
+<p>リモートリポジトリに変更を適用
 <code>$git push -u origin master</code></p>
+</li>
+</ul>
 <h3 id="ブランチ使うとき">ブランチ使うとき</h3>
 <hr>
-<p>-ブランチ切る
+<ul>
+<li>
+<p>ブランチ切る
 <code>$git brunch hoge</code></p>
-<p>-ブランチに入る
+</li>
+<li>
+<p>ブランチに入る
 <code>$git checkout hoge</code></p>
-<p>-(他のデバイスでやったブランチを持ってくるとき)
+</li>
+<li>
+<p>(他のデバイスでやったブランチを持ってくるとき)
 <code>$git pull origin hoge</code></p>
-<p>-実作業</p>
-<p>-addしてcommitしてpush</p>
-<p>-ブランチの作業内容をmasterにマージ</p>
-<p>-masterに入る
+</li>
+<li>
+<p>実作業</p>
+</li>
+<li>
+<p>addしてcommitしてpush</p>
+</li>
+<li>
+<p>ブランチの作業内容をmasterにマージ</p>
+</li>
+<li>
+<p>masterに入る
 <code>$git checkout master</code></p>
-<p>-マージ
+</li>
+<li>
+<p>マージ
 <code>$git merge hoge</code></p>
-<p>-リモートリポジトリにpush
+</li>
+<li>
+<p>リモートリポジトリにpush
 <code>$git push -u origin master</code></p>
+</li>
+</ul>
 <h1 id="次回">次回</h1>
 <hr>
 <p>複数人で開発するとき<br>
