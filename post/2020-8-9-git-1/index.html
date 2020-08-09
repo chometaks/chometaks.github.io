@@ -59,7 +59,7 @@
   "headline": "git\/github覚え書き①",
   "description" : "gitとgithubを真面目に使うことから逃げ続けた結果苦労したのでとりあえずメモ(あとで追加するかも)\n",
   "inLanguage" : "en",
-  "wordCount":  190 ,
+  "wordCount":  191 ,
   "datePublished" : "2020-08-09T04:36:27",
   "dateModified" : "2020-08-09T04:36:27",
   "image" : "https:\/\/chometaks.github.io\/images\/uropen.png",
@@ -389,7 +389,7 @@ masterブランチにいるとき、リモートのhogeブランチの内容と�
 <code>$git pull</code></p>
 </li>
 <li>
-<p>実作業(コマンドラインでファイルを作ったほうがわかりやすいと思う)
+<p>実作業(コマンドラインでファイルを作ったほうがわかりやすいと思う)<br>
 戻すときは<code>$git checkout HEAD .</code></p>
 </li>
 <li>
@@ -397,7 +397,7 @@ masterブランチにいるとき、リモートのhogeブランチの内容と�
 . ですべてのファイル、ファイル名指定もできる<br>
 <code>$git add .</code><br>
 戻すときは<code>$git reset HEAD .</code><br>
-→addのコマンドだけを取り消す、作業したファイルはそのまま
+→addのコマンドだけを取り消す、作業したファイルはそのまま<br>
 →作業したファイルも元に戻したいときは<code>$git reset --hard HEAD</code></p>
 </li>
 <li>
@@ -414,7 +414,9 @@ masterブランチにいるとき、リモートのhogeブランチの内容と�
 <li>
 <p>リモートリポジトリに変更を適用<br>
 <code>$git push -u origin master</code><br>
-なかったことにするときは<code>$git reset --hard HEAD</code>してから``$git push -f origin master<code>→コンフリクト起こる可能性があるからmasterでは控える   →</code>$git revert HEAD`した場合は安全になかったことにできる</p>
+なかったことにするときは<code>$git reset --hard HEAD</code>してから<code>$git push -f origin master</code><br>
+→コンフリクト起こる可能性があるからmasterでは控える<br>
+→<code>$git revert HEAD</code>した場合は安全になかったことにできる</p>
 </li>
 </ul>
 <h3 id="ブランチ使うとき">ブランチ使うとき</h3>
