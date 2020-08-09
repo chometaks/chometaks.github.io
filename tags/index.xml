@@ -5,10 +5,19 @@
     <link>https://chometaks.github.io/tags/</link>
     <description>Recent content in Tags on chomemo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 12 Jul 2020 04:49:48 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2020 04:36:27 +0900</lastBuildDate>
     
 	<atom:link href="https://chometaks.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>git</title>
+      <link>https://chometaks.github.io/tags/git/</link>
+      <pubDate>Sun, 09 Aug 2020 04:36:27 +0900</pubDate>
+      
+      <guid>https://chometaks.github.io/tags/git/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>日記</title>
