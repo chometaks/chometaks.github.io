@@ -59,7 +59,7 @@
   "headline": "git\/github覚え書き①",
   "description" : "gitとgithubを真面目に使うことから逃げ続けた結果苦労したのでとりあえずメモ(あとで追加するかも)\n",
   "inLanguage" : "en",
-  "wordCount":  158 ,
+  "wordCount":  154 ,
   "datePublished" : "2020-08-09T04:36:27",
   "dateModified" : "2020-08-09T04:36:27",
   "image" : "https:\/\/chometaks.github.io\/images\/uropen.png",
@@ -277,7 +277,7 @@ if (!doNotTrack) {
         <p>gitとgithubを真面目に使うことから逃げ続けた結果苦労したのでとりあえずメモ(あとで追加するかも)</p>
 <h1 id="リポジトリとかブランチとかごっちゃになりそう">リポジトリとかブランチとかごっちゃになりそう</h1>
 <hr>
-<p>ローカルリポジトリ→パソコンの中<br>
+<p>ローカルリポジトリ→デバイスの中<br>
 リモートリポジトリ→githubサーバ<br>
 (リモートリポジトリのデフォルトの名前はorigin)</p>
 <p>リモート追跡ブランチ→リモートリポジトリをコピーして追跡する</p>
@@ -311,44 +311,60 @@ if (!doNotTrack) {
 <h1 id="git-pullがよくわかんない">git pullがよくわかんない</h1>
 <hr>
 <ul>
-<li>
-<p>pull→fetch+merge</p>
-</li>
-<li>
-<p>fetch→リモート追跡ブランチにリモートリポジトリをコピー(すべてのブランチ origin/〇〇 が更新される？)</p>
-</li>
-<li>
-<p>merge origin/〇〇→ローカルリポジトリの今いるブランチにリモート追跡ブランチorigin/〇〇をマージ<br>
+<li>pull→fetch+merge</li>
+<li>fetch<br>
+→リモート追跡ブランチにリモートリポジトリをコピー(すべてのブランチ origin/〇〇 が更新される？)</li>
+<li>merge origin/〇〇<br>
+→ローカルリポジトリの今いるブランチにリモート追跡ブランチorigin/〇〇をマージ
+<br>
+<br>
 マージ#とは<br>
 両方の変更を保持して合わせること<br>
 マージしてもローカルリポジトリが変更されただけなのでリモートリポジトリは変更されてない<br>
-参照のみ移動するのはfast forwardマージ</p>
-</li>
-<li>
-<p><code>$git pull</code><br>
+参照のみ移動するのはfast forwardマージ<br>
+<br>
+<br></li>
+<li><code>$git pull</code><br>
 masterブランチにいるとき、リモートのmasterブランチの内容をコピー<br>
-masterブランチ以外ではエラー</p>
-</li>
-<li>
-<p><code>$git pull origin master'</code><br>
-上に同じ</p>
-</li>
-<li>
-<p><code>$git pull origin hoge</code>  <br>
+masterブランチ以外ではエラー
+<br>
+<br></li>
+<li><code>$git pull origin master'</code><br>
+上に同じ
+<br>
+<br></li>
+<li><code>$git pull origin hoge</code>  <br>
 hogeブランチにいるとき、リモートのhogeブランチの内容をコピー<br>
-masterブランチにいるとき、リモートのhogeブランチの内容とマージされる</p>
-</li>
+masterブランチにいるとき、リモートのhogeブランチの内容とマージされる
+<br>
+<br></li>
 </ul>
 <h1 id="コミットってなんだ">コミットってなんだ</h1>
 <hr>
 <p>ローカルリポジトリのブランチの作業内容を編集履歴に入れる<br>
 (リモートリポジトリにpushする準備)</p>
-<p>ローカルリポジトリの階層</p>
-<p>|編集履歴  |
-|git reset (mode) (commit)↓    ↑git commit -m&quot;コミット内容&rdquo;  |
-|ステージ  |
-|git reset HEAD           ↓    ↑git add .  |
-|作業フォルダ  |</p>
+<p>ローカルリポジトリの階層
+<br>
+<br></p>
+<table>
+<tr>
+  <td colspan=2><center>編集履歴</center></td>
+</tr>
+<tr>
+  <td>git reset (mode) (commit)↓</td>
+  <td>↑git commit -m"コミット内容"</td>
+</tr>
+<tr>
+  <td colspan=2><center>ステージ</center></td>
+</tr>
+<tr>
+  <td>git reset HEAD↓</td>
+  <td>↑git add .</td>
+</tr>
+<tr>
+  <td colspan=2><center>作業フォルダ</center></td>
+</tr>
+</table>
 <h1 id="実際の流れ一人でやるとき">実際の流れ(一人でやるとき)</h1>
 <hr>
 <ul>
