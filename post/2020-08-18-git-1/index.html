@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>git/github覚え書き① - chomemo</title>
-  <meta name="description" content="gitとgithubを真面目に使うことから逃げ続けた結果苦労したのでとりあえずメモ(あとで追加するかも)">
+  <title>git/github覚え書き② - chomemo</title>
+  <meta name="description" content="ハッカソンでgit/githubを使ってコード共有したので共有の仕方をメモ">
   <meta name="author" content="chometaks"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -44,8 +44,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/chometaks.github.io\/post\/2020-8-9-git-1\/",
-          "name": "Git\/github覚え書き①"
+          "@id": "https:\/\/chometaks.github.io\/post\/2020-08-18-git-1\/",
+          "name": "Git\/github覚え書き②"
         }
     }]
 }
@@ -56,15 +56,15 @@
   "author": {
     "name" : "chometaks"
   },
-  "headline": "git\/github覚え書き①",
-  "description" : "gitとgithubを真面目に使うことから逃げ続けた結果苦労したのでとりあえずメモ(あとで追加するかも)\n",
+  "headline": "git\/github覚え書き②",
+  "description" : "ハッカソンでgit\/githubを使ってコード共有したので共有の仕方をメモ\n",
   "inLanguage" : "en",
-  "wordCount":  191 ,
-  "datePublished" : "2020-08-09T04:36:27",
-  "dateModified" : "2020-08-09T04:36:27",
+  "wordCount":  84 ,
+  "datePublished" : "2020-08-18T00:42:33",
+  "dateModified" : "2020-08-18T00:42:33",
   "image" : "https:\/\/chometaks.github.io\/images\/uropen.png",
   "keywords" : [ "git" ],
-  "mainEntityOfPage" : "https:\/\/chometaks.github.io\/post\/2020-8-9-git-1\/",
+  "mainEntityOfPage" : "https:\/\/chometaks.github.io\/post\/2020-08-18-git-1\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/chometaks.github.io",
@@ -78,15 +78,15 @@
 }
 </script>
 
-<meta property="og:title" content="git/github覚え書き①" />
-<meta property="og:description" content="gitとgithubを真面目に使うことから逃げ続けた結果苦労したのでとりあえずメモ(あとで追加するかも)">
+<meta property="og:title" content="git/github覚え書き②" />
+<meta property="og:description" content="ハッカソンでgit/githubを使ってコード共有したので共有の仕方をメモ">
 <meta property="og:image" content="https://chometaks.github.io/images/uropen.png" />
-<meta property="og:url" content="https://chometaks.github.io/post/2020-8-9-git-1/" />
+<meta property="og:url" content="https://chometaks.github.io/post/2020-08-18-git-1/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="chomemo" />
 
-  <meta name="twitter:title" content="git/github覚え書き①" />
-  <meta name="twitter:description" content="gitとgithubを真面目に使うことから逃げ続けた結果苦労したのでとりあえずメモ(あとで追加するかも)">
+  <meta name="twitter:title" content="git/github覚え書き②" />
+  <meta name="twitter:description" content="ハッカソンでgit/githubを使ってコード共有したので共有の仕方をメモ">
   <meta name="twitter:image" content="https://chometaks.github.io/images/uropen.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@username" />
@@ -239,7 +239,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>git/github覚え書き①</h1>
+                <h1>git/github覚え書き②</h1>
               
               
               
@@ -247,7 +247,7 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on August 9, 2020
+  <i class="fas fa-calendar"></i>&nbsp;Posted on August 18, 2020
   
   
   
@@ -274,199 +274,119 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>gitとgithubを真面目に使うことから逃げ続けた結果苦労したのでとりあえずメモ(あとで追加するかも)</p>
-<h1 id="リポジトリとかブランチとかごっちゃになりそう">リポジトリとかブランチとかごっちゃになりそう</h1>
+        <p>ハッカソンでgit/githubを使ってコード共有したので共有の仕方をメモ</p>
+<h1 id="共有の手順">共有の手順</h1>
 <hr>
-<p>ローカルリポジトリ→デバイスの中<br>
-リモートリポジトリ→githubサーバ<br>
-(リモートリポジトリのデフォルトの名前はorigin)</p>
-<p>リモート追跡ブランチ→リモートリポジトリをコピーして追跡する</p>
-<table>
-<thead>
-<tr>
-<th>ローカルリポジトリのブランチ</th>
-<th>リモート追跡ブランチ</th>
-<th>リモートリポジトリ</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>master</td>
-<td>origin/master</td>
-<td>master</td>
-</tr>
-<tr>
-<td>hoge</td>
-<td>origin/hoge</td>
-<td>hoge</td>
-</tr>
-<tr>
-<td>huga</td>
-<td>origin/huga</td>
-<td>huga</td>
-</tr>
-</tbody>
-</table>
-<p>右に行くほど上流ブランチ</p>
-<h1 id="git-pullがよくわかんない">git pullがよくわかんない</h1>
-<hr>
-<ul>
-<li>pull→fetch+merge</li>
-<li>fetch<br>
-→リモート追跡ブランチにリモートリポジトリをコピー(すべてのブランチ origin/〇〇 が更新される？)</li>
-<li>merge origin/〇〇<br>
-→ローカルリポジトリの今いるブランチにリモート追跡ブランチorigin/〇〇をマージ
-<br>
-<br>
-マージ#とは<br>
-両方の変更を保持して合わせること<br>
-マージしてもローカルリポジトリが変更されただけなのでリモートリポジトリは変更されてない<br>
-参照のみ移動するのはfast forwardマージ<br>
-<br>
-<br></li>
-<li><code>$git pull</code><br>
-masterブランチにいるとき、リモートのmasterブランチの内容をコピー<br>
-masterブランチ以外ではエラー
-<br>
-<br></li>
-<li><code>$git pull origin master</code><br>
-上に同じ
-<br>
-<br></li>
-<li><code>$git pull origin hoge</code>  <br>
-hogeブランチにいるとき、リモートのhogeブランチの内容をコピー<br>
-masterブランチにいるとき、リモートのhogeブランチの内容とマージされる
-<br>
-<br></li>
-</ul>
-<h1 id="コミットってなんだ">コミットってなんだ</h1>
-<hr>
-<p>ローカルリポジトリのブランチの作業内容を編集履歴に入れる<br>
-(リモートリポジトリにpushする準備)</p>
-<p>ローカルリポジトリの階層
-<br>
-<br></p>
-<table>
-<tr>
-  <td colspan=2><center>編集履歴</center></td>
-</tr>
-<tr>
-  <td>git reset (mode) (commit)↓</td>
-  <td>↑git commit -m "コミット内容"</td>
-</tr>
-<tr>
-  <td colspan=2><center>ステージ</center></td>
-</tr>
-<tr>
-  <td>git reset HEAD↓</td>
-  <td>↑git add .</td>
-</tr>
-<tr>
-  <td colspan=2><center>作業フォルダ</center></td>
-</tr>
-</table>
-<h1 id="実際の流れ一人でやるとき">実際の流れ(一人でやるとき)</h1>
-<hr>
-<ul>
+<h3 id="共有する側">共有する側</h3>
+<ol>
 <li>
-<p>(始めるとき)ディレクトリをgitで管理できるようにする <br>
-.gitファイルが作成される <br>
+<p>共有したい作業ディレクトリに移動<br>
+<code>$cd hogehoge</code></p>
+</li>
+<li>
+<p>gitで初期化<br>
 <code>$git init</code></p>
 </li>
 <li>
-<p>リポジトリを作成</p>
+<p>github上でリポジトリを作成<br></p>
 </li>
 <li>
 <p>リポジトリとデバイスのディレクトリを紐付ける<br>
-<code>$git remote add origin (URL)</code></p>
+<code>$git remote add origin (リポジトリのURL)</code></p>
 </li>
 <li>
-<p>(他のデバイスから持ってくるとき)リモートリポジトリからコピー<br>
-<code>$git clone (自分のリポジトリのURL)</code></p>
+<p>github上でコラボレータ依頼を出す<br>
+<img src="img/%E3%82%B3%E3%83%A9%E3%83%9C%E3%83%AC%E3%83%BC%E3%82%BF.png" alt="コラボレータ"></p>
+</li>
+</ol>
+<br>
+<h3 id="共有してもらう側">共有してもらう側</h3>
+<ol>
+<li>
+<p>github上でコラボレータ登録を受ける<br>
+<img src="img/%E3%82%B3%E3%83%A9%E3%83%9C%E3%83%AC%E3%83%BC%E3%82%BF%E5%8F%97%E3%81%91%E3%82%8B.png" alt="コラボレータ受ける"></p>
 </li>
 <li>
-<p>(他のデバイスでやった変更を適用)<br>
-<code>$git pull</code></p>
+<p>リポジトリをクローン<br>
+<code>$git clone (URL)</code></p>
 </li>
+</ol>
+<br>
+<h3 id="編集の手順共通">編集の手順(共通)</h3>
+<ol>
 <li>
-<p>実作業(コマンドラインでファイルを作ったほうがわかりやすいと思う)<br>
-戻すときは<code>$git checkout HEAD .</code></p>
-</li>
-<li>
-<p>変更をステージング<br>
-. ですべてのファイル、ファイル名指定もできる<br>
-<code>$git add .</code><br>
-戻すときは<code>$git reset HEAD .</code><br>
-→addのコマンドだけを取り消す、作業したファイルはそのまま<br>
-→作業したファイルも元に戻したいときは<code>$git reset --hard HEAD</code></p>
-</li>
-<li>
-<p>変更をコミット<br>
-<code>$git commit -m &quot;コミット内容をわかりやすく書く&quot;</code><br>
-なかったことにするときは<code>$git reset HEAD^</code><br>
-→commit、addのコマンドを取り消す、作業したファイルはそのまま<br>
-→作業したファイルも元に戻したいときは<code>$git reset --hard HEAD^</code><br>
-→commitだけを取り消すときは<code>$git reset --soft HEAD^</code><br>
-上記の方法はpushしたときにコンフリクトが起こる可能性がある(自分しか使わないブランチならおｋ)<br>
-安全なコミットの取り消し方(打ち消すコミットを生成)は<code>$git revert HEAD</code><br>
-→複数取り消すときは<code>$git revert HEAD-(取り消したい数)</code></p>
-</li>
-<li>
-<p>リモートリポジトリに変更を適用<br>
-<code>$git push -u origin master</code><br>
-なかったことにするときは<code>$git reset --hard HEAD</code>してから<code>$git push -f origin master</code><br>
-→コンフリクト起こる可能性があるからmasterでは控える<br>
-→<code>$git revert HEAD</code>した場合は安全になかったことにできる</p>
-</li>
-</ul>
-<h3 id="ブランチ使うとき">ブランチ使うとき</h3>
-<hr>
-<ul>
-<li>
-<p>ブランチ切る<br>
-<code>$git brunch hoge</code></p>
+<p>【最初のみ】ブランチを切る(自分の開発ブランチを作る)<br>
+何か編集を加えるときは必ず！<br>
+<code>$git branch (ブランチ名)</code></p>
 </li>
 <li>
 <p>ブランチに入る<br>
-<code>$git checkout hoge</code></p>
+<code>$git checkout (ブランチ名)</code></p>
 </li>
 <li>
-<p>(他のデバイスでやったブランチを持ってくるとき)<br>
-<code>$git pull origin hoge</code></p>
+<p>実際の作業<br></p>
 </li>
 <li>
-<p>実作業</p>
+<p>編集をステージング<br>
+<code>$git add .</code></p>
 </li>
 <li>
-<p>addしてcommitしてpush</p>
+<p>編集をコミット<br>
+<code>$git commit -m &quot;編集内容をわかりやすく&quot;</code></p>
 </li>
 <li>
-<p>ブランチの作業内容をmasterにマージ</p>
+<p>githubに変更を適用<br>
+<code>$git push origin (ブランチ名)</code></p>
 </li>
 <li>
-<p>masterに入る<br>
+<p>【自分の開発が終わったら】masterブランチに自分のブランチの内容を取り込む<br>
+この作業はgithub上で行う<br></p>
+<ol>
+<li>
+<p>プルリクエストを出す<br>
+<img src="img/%E3%83%97%E3%83%AB%E3%83%AA%E3%82%AF%E5%87%BA%E3%81%99.png" alt="プルリク出す"></p>
+</li>
+<li>
+<p>(リポジトリの管理者)いいと思ったらプルリクエストを受ける<br>
+<img src="img/%E3%83%97%E3%83%AB%E3%83%AA%E3%82%AF%E5%8F%97%E3%81%91%E3%82%8B.png" alt="プルリク受ける"></p>
+</li>
+</ol>
+</li>
+<li>
+<p>【他の人がmasterを更新したとき】自分の開発ブランチに最新の内容を取り込む<br></p>
+<ol>
+<li>
+<p>masterブランチに移動<br>
 <code>$git checkout master</code></p>
 </li>
 <li>
-<p>マージ<br>
-<code>$git merge hoge</code></p>
+<p>masterブランチを更新<br>
+<code>$git pull origin master</code></p>
 </li>
 <li>
-<p>リモートリポジトリにpush<br>
-<code>$git push origin master</code></p>
+<p>自分の開発ブランチに移動<br>
+<code>$git checkout (ブランチ名)</code></p>
 </li>
+<li>
+<p>masterブランチの内容を取り込む<br>
+<code>$git merge origin master</code></p>
+</li>
+</ol>
+</li>
+</ol>
+<br>
+<h3 id="その他">その他</h3>
+<ul>
+<li>gitに上げたくないファイルは.gitignoreに書く<br>
+→作業ディレクトリに置く、*.jpg など書くことで追跡されない​<br>
+<br></li>
+<li>API keyなど隠したい文字列がある時は別ファイル、環境変数に書く​<br>
+→隠したい文字列を書いたファイルを .gitignore に追記する<br>​
+ex)Pythonの場合​<br>
+<a href="https://qiita.com/hedgehoCrow/items/2fd56ebea463e7fc0f5b">https://qiita.com/hedgehoCrow/items/2fd56ebea463e7fc0f5b</a>​</li>
 </ul>
-<h1 id="次回">次回</h1>
-<hr>
-<p>複数人で開発するとき<br>
-(めっちゃわかりづらくなってしまった)</p>
-<h2 id="参考">参考</h2>
-<p><a href="https://qiita.com/kibinag0/items/ec6583e4e7608c4d2add#%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA">https://qiita.com/kibinag0/items/ec6583e4e7608c4d2add#%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA</a>
-<a href="https://eng-entrance.com/git-pull">https://eng-entrance.com/git-pull</a>
-<a href="https://qiita.com/bitarx/items/4558f86e43a2c3493fa9">https://qiita.com/bitarx/items/4558f86e43a2c3493fa9</a>
-<a href="https://qiita.com/uasi/items/69368c17c79e99aaddbf">https://qiita.com/uasi/items/69368c17c79e99aaddbf</a>
-<a href="https://qiita.com/nasutaro211/items/c590994a5d5091206c08">https://qiita.com/nasutaro211/items/c590994a5d5091206c08</a>
-<a href="https://qiita.com/tani-shi/items/3419600447292abf6c79">https://qiita.com/tani-shi/items/3419600447292abf6c79</a></p>
+<br>
+<p>gitむずすぎる</p>
 
         
           <div class="blog-tags">
@@ -486,42 +406,42 @@ masterブランチにいるとき、リモートのhogeブランチの内容と�
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fchometaks.github.io%2fpost%2f2020-8-9-git-1%2f&amp;text=git%2fgithub%e8%a6%9a%e3%81%88%e6%9b%b8%e3%81%8d%e2%91%a0&amp;via=username" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fchometaks.github.io%2fpost%2f2020-08-18-git-1%2f&amp;text=git%2fgithub%e8%a6%9a%e3%81%88%e6%9b%b8%e3%81%8d%e2%91%a1&amp;via=username" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fchometaks.github.io%2fpost%2f2020-8-9-git-1%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fchometaks.github.io%2fpost%2f2020-08-18-git-1%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fchometaks.github.io%2fpost%2f2020-8-9-git-1%2f&amp;title=git%2fgithub%e8%a6%9a%e3%81%88%e6%9b%b8%e3%81%8d%e2%91%a0" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fchometaks.github.io%2fpost%2f2020-08-18-git-1%2f&amp;title=git%2fgithub%e8%a6%9a%e3%81%88%e6%9b%b8%e3%81%8d%e2%91%a1" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fchometaks.github.io%2fpost%2f2020-8-9-git-1%2f&amp;title=git%2fgithub%e8%a6%9a%e3%81%88%e6%9b%b8%e3%81%8d%e2%91%a0" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fchometaks.github.io%2fpost%2f2020-08-18-git-1%2f&amp;title=git%2fgithub%e8%a6%9a%e3%81%88%e6%9b%b8%e3%81%8d%e2%91%a1" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fchometaks.github.io%2fpost%2f2020-8-9-git-1%2f&amp;title=git%2fgithub%e8%a6%9a%e3%81%88%e6%9b%b8%e3%81%8d%e2%91%a0" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fchometaks.github.io%2fpost%2f2020-08-18-git-1%2f&amp;title=git%2fgithub%e8%a6%9a%e3%81%88%e6%9b%b8%e3%81%8d%e2%91%a1" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fchometaks.github.io%2fpost%2f2020-8-9-git-1%2f&amp;description=git%2fgithub%e8%a6%9a%e3%81%88%e6%9b%b8%e3%81%8d%e2%91%a0" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fchometaks.github.io%2fpost%2f2020-08-18-git-1%2f&amp;description=git%2fgithub%e8%a6%9a%e3%81%88%e6%9b%b8%e3%81%8d%e2%91%a1" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -543,7 +463,7 @@ masterブランチにいるとき、リモートのhogeブランチの内容と�
                   <ul>
                 
                 
-                    <li><a href="/post/2020-08-18-git-1/">git/github覚え書き②</a></li>
+                    <li><a href="/post/2020-8-9-git-1/">git/github覚え書き①</a></li>
                 
               </ul>
 
@@ -555,13 +475,9 @@ masterブランチにいるとき、リモートのhogeブランチの内容と�
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://chometaks.github.io/post/2020-07-12-create-blog-1/" data-toggle="tooltip" data-placement="top" title="初めてのブログ">&larr; Previous Post</a>
+              <a href="https://chometaks.github.io/post/2020-8-9-git-1/" data-toggle="tooltip" data-placement="top" title="git/github覚え書き①">&larr; Previous Post</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://chometaks.github.io/post/2020-08-18-git-1/" data-toggle="tooltip" data-placement="top" title="git/github覚え書き②">Next Post &rarr;</a>
-            </li>
           
         </ul>
       

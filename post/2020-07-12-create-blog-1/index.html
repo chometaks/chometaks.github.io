@@ -278,6 +278,23 @@ if (!doNotTrack) {
 <p>備忘録替わりに更新して行けたらいいな(希望)</p>
 <p>参考にしたサイトはこれ<br>
 <a href="https://uzimihsr.github.io/post/2019-08-07-create-blog-1/">GitHub PagesとHugoでブログをつくった</a></p>
+<!--
+記事追加の手順
+1. hugo new post/(ファイルタイトル).md
+2. ファイルの中身を編集
+3. hugo server -D
+(見え方を確認 http://localhost:1313/)
+4. ./deploy.sh "(コミット内容、編集内容)"
+-->
+<!--
+改行→半角スペース2個か<br>
+下書き→draft: True
+(localhostでは表示される)
+注意: ファイルタイトルが当日だとlocalhostでもデプロイしたあとでも表示されない
+(時間の基準がアメリカのため？)
+画像→./static/imagesの中に入れる、マークダウンには![なんか](img/(ファイル名))と書く
+--><blockquote>
+</blockquote>
 
         
           <div class="blog-tags">
